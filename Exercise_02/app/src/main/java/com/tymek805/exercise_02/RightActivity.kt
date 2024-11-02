@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ActionMode
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.tymek805.exercise_02.databinding.ActivityRightBinding
 import org.w3c.dom.Text
 
@@ -99,6 +100,12 @@ class RightActivity : AppCompatActivity() {
                 initialDate.get(Calendar.YEAR), initialDate.get(Calendar.MONTH), initialDate.get(Calendar.DAY_OF_MONTH)
             )
             datePickerDialog.show()
+        }
+
+        val fab: FloatingActionButton = binding.fab
+        fab.setOnClickListener {_ ->
+            colorColor.setTextColor(Color.BLACK)
+            colorColor.setBackgroundColor(Color.parseColor("#D3D3D3"))
         }
     }
 }
